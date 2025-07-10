@@ -8,10 +8,8 @@ import lombok.Setter;
 
 @Component
 @Data
-
 public class Restaurant {
 
 	@Setter(onMethod_ = @Autowired)
-	private Chef chef ; // Chef chef = new chef();
-	
+	private Chef chef;	// Chef chef = new Chef();	
 }

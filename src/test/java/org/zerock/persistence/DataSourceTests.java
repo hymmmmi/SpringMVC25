@@ -32,18 +32,17 @@ public class DataSourceTests {
 
 	@Test
 	public void testMyBatis() {
-		
-		try(SqlSession session = sqlSessionFactory.openSession();
-				Connection con = session.getConnection(); // 마이바티스 연결용 코드
-				
-				){
+
+		try (SqlSession session = sqlSessionFactory.openSession();
+				Connection con = session.getConnection(); // 마이바티스
+		) {
 			log.info(session);
 			log.info(con);
 		} catch (Exception e) {
 			fail(e.getMessage());
 		}
-	}
 
+	}
 
 	@Test
 	public void testConnection() {
