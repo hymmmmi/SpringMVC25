@@ -53,9 +53,10 @@ public class BoardServiceTests {
 	@Test
 	public void testGetList() {
 		
-		log.info("=========================");
+		log.info("======================");
 		service.getList().forEach(board -> log.info(board));
-		log.info("=========================");
+		log.info("======================");
+		
 	}
 	
 	@Test
@@ -65,22 +66,23 @@ public class BoardServiceTests {
 	}
 	
 	@Test
-	public void testDelte() {
+	public void testDelete() {
 		log.info("삭제된 결과 : " + service.remove(2L));
 	}
 	
 	@Test
 	public void testUpdate() {
 		
-		BoardVO board = service.get(1L); // 1번게시물 가져오걸아
+		BoardVO board = service.get(1L); // 1번게시물 가져와!!!
 		
 		if(board == null) {
-			log.info("찾는 게시물이 없습니다");
+			log.info("찾는 게시물이 없습니다. ");
 			return;
 		}
 		
 		board.setTitle("서비스에서 수정된 제목");
-		log.info("수정된 객체 출력 : " + service.modify(board));
+		log.info("수정된 결과 출력 : " + service.modify(board));
+		
 	}
 }
 

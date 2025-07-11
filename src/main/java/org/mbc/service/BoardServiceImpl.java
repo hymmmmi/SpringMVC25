@@ -31,25 +31,25 @@ public class BoardServiceImpl implements BoardService{
 
 	@Override
 	public BoardVO get(Long bno) {
-		// 
-
-		log.info("BoardServiceImpl.getList 메서드 실행.....");
+		// 게시물의 번호가 들어가면 메퍼의 select문이 동작해야 한다.
+		log.info("BoardServiceImpl.get메서드 실행.....");
 		
 		return mapper.read(bno);
+		
 	}
 
 	@Override
 	public boolean modify(BoardVO board) {
-		// 프론트에서 객체가 넘어오면 매퍼를 통해서 update쿼리가 실행된다.
-		log.info("BoardServiceImpl.modify 메서드 실행 ....");
+		// 프론트에서 객체가 넘어오면 매퍼를 통해서 update 쿼리가 실행된다.
+		log.info("BoardServiceImpl.modify메서드 실행.....");
 		return mapper.update(board) == 1;
 	}
 
 	@Override
 	public boolean remove(Long bno) {
-		// 프론트에서 번호가 넘어오면 매처를 통해서 delete 쿼리가 실행된다.
+		// 프론트에서 번호가 넘어오면 매퍼를 통해서 delete 쿼리기 실행된다.
 		
-		log.info("BoardServiceImpl.remove 메서드 실행 ....");
+		log.info("BoardServiceImpl.remove메서드 실행.....");
 		return mapper.delete(bno) == 1;
 	}
 
